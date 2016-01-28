@@ -1,0 +1,157 @@
+// body.body-home {
+//     min-width: 900px;
+// }
+.page-content.homepage {
+    background: #fff;
+    border-top: 8px solid #dfe1e3;
+    margin-top: -24px;
+    position: relative;
+    padding: 25px 35px;
+    // *Fix for IE - Content negative top margin fails without
+    /**/float:left;
+    /**/z-index: 9999;
+
+    .home-content {
+        position: relative;
+        &:before, &:after {
+            content: '';
+            display: block;
+            width: 1px;
+            position: absolute;
+            background: #dfe1e3 url(images/separator-gradient.png) bottom center no-repeat;
+            top: 65px;
+            bottom: 50px;
+            left: 30%;
+        }
+        &:after {
+            left: 56%;
+        }
+    }
+    .form-list {
+        margin-bottom: 40px;
+    }
+    .find, .links, .headlines {
+        box-sizing: border-box;
+        padding: 0 40px;
+        h2 {
+            .ff-pt-regular;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+    }
+    .find {
+        float: left;
+        padding-left: 0;
+        a {
+            color: #2373bf;
+            font-size: .85rem;
+        }
+        h2 {
+            clear: both;
+        }
+        >ul {
+            position: relative;
+             @media screen and (max-width: 1115px) {
+                float: left;
+            }
+        }
+        >ul:first-of-type:before {
+            content: url(/assets/img/icons/Physician-icon.png);
+            position: absolute;
+            top: -5px;
+            left: 0;
+            @media screen and (max-width: 1115px) {
+                content: none;
+            }
+        }
+        >ul:last-of-type:before {
+            content: url(/assets/img/icons/locations-icon.png);
+            position: absolute;
+            top: -5px;
+            left: 0;
+             @media screen and (max-width: 1115px) {
+                content: none;
+            }
+        }
+    }
+    .find {
+        width: 30%;
+    }
+    .links {
+        float: left;
+        width: 26%;
+        ul {
+            // float: left;
+            list-style-type: none;
+            padding-left: 0;
+            li {
+                margin-bottom: 2px;
+                img {
+                    float: left;
+                    margin-right: 12px;
+                }
+                a {
+                    .ff-pt-regular;
+                    display: block;
+                    font-size: 16px;
+                    margin: 4px 0;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .links ul:first-of-type a {
+        color: #000;
+    }
+    .links ul:first-of-type a:hover {
+        color: #999;
+
+    }
+    .headlines {
+        float: right;
+        width: 44%;
+        padding-right: 0;
+    }
+    .styled-dropdown, .input-button-pair {
+        float: right;
+        width: 210px !important;
+    }
+    .styled-dropdown {
+        margin-bottom: 0;
+    }
+    .browse {
+        float: right;
+        margin-right: 8px;
+    }
+}
+.content {
+    color: #475560;
+}
+.content-full {
+    margin-bottom: @panel-spacing;
+
+height: 432px;
+    header {
+        margin-top: 80px;
+    }
+    .info {
+        margin-bottom: 30px;
+    }
+}
+.content-split {
+    margin-bottom: @panel-spacing;
+
+> .one-third, > .two-third {
+        padding: 0;
+    }
+    > .one-third {
+        padding-left: @panel-spacing;
+
+    }
+    .heading-with-sub {
+        margin-top: 36px;
+        h2 {
+            font-size: 30px;
+        }
+    }
+}

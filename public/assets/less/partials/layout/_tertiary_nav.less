@@ -1,0 +1,71 @@
+.tertiary-nav {
+    position: relative;
+    &:before {
+            content: '';
+            display: block;
+            height: 1px;
+            background: #dfe1e3;
+            margin-left: 225px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 51px;
+        }
+    ul {
+        list-style-type: none;
+        float: right;
+        li {
+            display: inline-block;
+        }
+        a {
+            .ff-pt-bold;
+            color: @color-dark-blue;
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover {
+                color: #7e8083;
+            }
+        }
+        // @media screen and (max-width: 1140px) {
+        //     margin: 0 12px;
+        // }
+    }
+    .main-tertiary {
+        position: relative;
+        margin-bottom: 2px;
+        li {
+            margin-left: 25px;
+        }
+        a {
+            line-height: 3;
+            min-height: 30px;
+            padding-left: 30px;
+            &.location {
+                background: url('/assets/img/icons/find-location.png') top left no-repeat;
+            }
+            &.physician {
+                background: url('/assets/img/icons/find-physician.png') top left no-repeat;
+            }
+            &.library {
+                background: url('/assets/img/icons/health-library.png') top left no-repeat;
+                padding-left: 30px;
+            }
+            font-size:14px;
+        }
+    }
+    .secondary-tertiary {
+        margin-top: 0;
+        li {
+            margin-left: 30px;
+        }
+        a {
+            font-size: 12px;
+            &.giving {
+                background: url('/assets/img/icons/giving.png') top left no-repeat;
+                line-height: 1.8;
+                padding-left: 24px;
+            }
+        }
+    }
+}

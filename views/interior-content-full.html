@@ -1,0 +1,25 @@
+{% extends 'layouts/interior.html' %}
+{% set current_section = 'ourphysicians' %}
+{% set body_class = 'body-content' %}
+
+{% block breadcrumbs %}
+{% include 'partials/interior-content/common/breadcrumbs.html' with { selected: 'Section Landing Page' } %}
+{% endblock %}
+
+{% block navigation %}
+{% include 'partials/interior-content/common/navigation.html' with { selected: 'Section Landing Page' } %}
+{% endblock %}
+
+{% block header %}
+<header class="page-title">
+  <h1>Top Header - Usually the Section Name</h1>
+</header>
+{% endblock %}
+
+{% block primary_content %}
+
+<!-- START CONTENT -->
+{% include 'partials/interior-content/interior-content/content-full.html' %}
+<!-- END CONTENT -->
+
+{% endblock %}

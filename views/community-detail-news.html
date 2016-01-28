@@ -1,0 +1,35 @@
+{% extends 'layouts/interior.html' %}
+{% set current_section = 'newscommunity' %}
+
+{% block breadcrumbs %}
+{% include 'partials/newscommunity/common/breadcrumbs.html' with { selected: "What's Happening Now" } %}
+{% endblock %}
+
+{% block navigation %}
+{% include 'partials/newscommunity/common/navigation.html' with { selected: "What's Happening Now" } %}
+{% endblock %}
+
+{% block header %}
+<header class="page-title">
+  <h1>What's Happening Now</h1>
+</header>
+{% endblock %}
+
+{% block primary_content %}
+{% include 'partials/newscommunity/whatshappeningnow/social_grid_navigation.html' with { selected: 'news' } %}
+
+<!-- START CONTENT -->
+{% include 'partials/newscommunity/whatshappeningnow-detail/content.html' with { content: 'news' } %}
+<!-- END CONTENT -->
+{% endblock %}
+
+{% block scripts %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=416166841843068";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{% endblock %}

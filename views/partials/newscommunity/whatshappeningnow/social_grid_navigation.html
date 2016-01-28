@@ -1,0 +1,43 @@
+<nav class="social-filter-nav {% if context != 'grid' %}no-{% endif %}grid-context" data-navigation>
+    <ul>
+        <li>
+            <a href="{% if context != 'grid' %}/community.html{% endif %}#pnlGrid" class="button social-button social-all{% if !selected or selected == 'all' %} selected{% endif %}" data-filter="*">
+                <span aria-hidden="true" class="icon icon-all"></span>
+                <span class="label">All</span>
+            </a>
+        </li>
+        <li><span class="separator"></span></li>
+        <li>
+            <a href="{% if context != 'grid' %}/community.html{% endif %}#pnlGrid" class="button social-button social-news{% if selected == 'news' %} selected{% endif %}" data-filter=".block-news">
+                <span aria-hidden="true" class="icon icon-news"></span>
+                <span class="label">News</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% if context != 'grid' %}/community.html{% endif %}#pnlGrid" class="button social-button social-video{% if selected == 'video' %} selected{% endif %}" data-filter=".block-video">
+                <span aria-hidden="true" class="icon icon-video"></span>
+                <span class="label">Video</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% if context != 'grid' %}/community.html{% endif %}#pnlGrid" class="button social-button social-events{% if selected == 'events' %} selected{% endif %}" data-filter=".block-events">
+                <span aria-hidden="true" class="icon icon-events"></span>
+                <span class="label">Events</span>
+            </a>
+        </li>
+        <li><span class="separator"></span></li>
+        <li>
+            <a href="{% if context != 'grid' %}/community.html{% endif %}#pnlGrid" class="button social-button social-facebook{% if selected == 'facebook' %} selected{% endif %}" data-filter=".block-facebook">
+                <span aria-hidden="true" class="icon icon-facebook"></span>
+                <span class="label">Facebook</span>
+            </a>
+        </li>
+        <li>
+            <a href="{% if context != 'grid' %}/community.html{% endif %}#pnlGrid" class="button social-button social-instagram{% if selected == 'instagram' %} selected{% endif %}" data-filter=".block-instagram">
+                <span aria-hidden="true" class="icon icon-instagram"></span>
+                <span class="label">Instagram</span>
+            </a>
+        </li>
+        <li class="stretch"></li>
+    </ul>
+</nav>

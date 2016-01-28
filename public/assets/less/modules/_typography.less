@@ -1,0 +1,88 @@
+.font-face('droid_sansbold', '../fonts/DroidSans-Bold-webfont', bold);
+.font-face('droid_sansregular', '../fonts/DroidSans-webfont');
+.font-face('tch', '../fonts/tch');
+
+.ff-droid-bold {
+  font-family: 'droid_sansbold', 'Helvetica Neue', Helvetic, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.ff-droid-regular {
+  font-family: 'droid_sansregular', 'Helvetica Neue', Helvetic, Arial, sans-serif;
+}
+
+.ff-tahoma-regular {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ff-pt-regular {
+  font-family: 'PT Sans', Arial, sans-serif; 
+}
+
+.ff-pt-bold {
+  font-family: 'PT Sans', Arial, sans-serif; font-weight: 700; 
+}
+
+.ff-pt-narrow {
+  font-family: 'PT Sans Narrow', Arial, sans-serif; 
+}
+
+.ff-pt-caption {
+  font-family: 'PT Sans Caption', Arial, sans-serif; 
+}
+
+.ff-icon {
+  font-family: 'tch';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+}
+
+.ff-body {
+  .ff-pt-regular();
+}
+
+.ff-header {
+  .ff-pt-bold();
+  text-transform: none;
+}
+
+.ff-header-light {
+  .ff-pt-regular();
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.heading-with-sub {
+    h1, h2 {
+        margin: 0;
+    }
+
+    h1 {
+        .ff-header-light;
+        font-size: 20px;
+        line-height: 23px;
+        color: @subheading-color;
+    }
+
+    h2 {
+        color: @heading-color;
+        font-size: 40px;
+        line-height: 1;
+    }
+
+    .button {
+        float: right;
+        margin-top: 15px;
+
+        span {
+           padding-right:10px;
+        }
+    }
+}

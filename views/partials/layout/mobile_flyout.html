@@ -1,0 +1,23 @@
+{% import '../../macros/navigation.html' as navigation %}
+
+<div id="pnlMobileFlyout" class="mobile-flyout data-tier-0">
+    <header class="flyout-header">
+        <nav class="controls-left" data-collapse>
+            <span aria-hidden class="icon icon-caret-left-thin"></span>
+            <span class="visually-hidden">Previous Menu</span>
+        </nav>
+        <div class="label-stack">
+            <h1 class="navigation-label">Navigation</h1>
+        </div>
+        <nav class="controls-right">
+            <span class="separator"></span>
+            <a href="javascript:void(0);" class="menu-toggle" data-toggle-menu>
+                <span aria-hidden="true" class="icon icon-menu icon-menu--ex"></span>
+                <span class="visually-hidden">Hide Menu</span>
+            </a>
+        </nav>
+    </header>
+    <div class="flyout-container">
+        {{ navigation.flyout(sitemap) }}
+    </div>
+</div>

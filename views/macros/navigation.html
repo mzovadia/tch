@@ -1,0 +1,23 @@
+{% macro flyout(tree, tier) %}
+{% if !tier %}
+{% set tier = 0 %}
+<ul class="flyout-root">
+{% endif %}
+    {% for root in tree %}
+    <li>
+        <h{{ tier + 2 }} {% if root.children.length %}data-expand{% endif %}>
+            {% if root.url %}<a href="{{ root.url }}">{% endif %}
+            {{ root.text }}
+            {% if root.url %}</a>{% endif %}
+        </h{{ tier + 2 }}>
+        {% if root.children.length %}
+        <ul class="flyout-child">
+            {{ flyout(root.children, tier + 1) }}
+        </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+{% if !tier %}
+</ul>
+{% endif %}
+{% endmacro %}

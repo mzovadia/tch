@@ -1,0 +1,43 @@
+{% extends 'layouts/interior.html' %}
+{% set script_component = 'community' %}
+{% set body_class = 'body-community' %}
+{% set current_section = 'newscommunity' %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/vendor/jquery.isotope.css">
+{% endblock %}
+
+<!-- {% block title_bar %}
+<h1>This is a test</h1>
+{% endblock %} -->
+
+{% block breadcrumbs %}
+{% include 'partials/newscommunity/common/breadcrumbs.html' with { selected: "What's Happening Now" } %}
+{% endblock %}
+
+{% block navigation %}
+{% include 'partials/newscommunity/common/navigation.html' with { selected: "What's Happening Now" } %}
+{% endblock %}
+
+{% block header %}
+<header class="page-title">
+  <h1>What's Happening Now</h1>
+</header>
+{% endblock %}
+
+{% block primary_content %}
+{% include 'partials/newscommunity/whatshappeningnow/social_grid.html' %}
+{% endblock %}
+
+{% block scripts %}
+<script src="/js/vendor/jquery.uTabs.js">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{% endblock %}

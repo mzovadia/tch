@@ -1,0 +1,277 @@
+.tabbed-navigation-background {
+    .transparent-background(@color-dark-blue, 0.75);
+}
+
+.tabbed-navigation {
+    header {
+        position: relative;
+        float: left;
+        padding-left: 20px;
+        .tabbed-navigation-background;
+    }
+
+    h1 {
+        line-height: 50px;
+        font-size: 16px;
+        color: white;
+        margin: 0;
+    }
+
+    .navigation-container {
+        position: relative;
+        padding: 0;
+        text-align: right;
+        overflow: hidden;
+    }
+
+    ul {
+        position: relative;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+        .inline-block;
+
+        &:before {
+            content: '';
+            height: 50px;
+            position: absolute;
+            .tabbed-navigation-background;
+            width: 9999px;
+            left: 0;
+            margin-left: -9999px;
+        }
+
+        .ie8 &:before {
+            background: url('/assets/img/bg_top_nav_ie8.png');
+        }
+    }
+
+    li {
+        .inline-block;
+        .tabbed-navigation-background;
+        .ff-header;
+        margin-left: 1px;
+
+        &:hover {
+            .transparent-background(mix(@color-tch-blue, @color-dark-blue), 0.8)
+        }
+
+        &.selected {
+            .transparent-background(@color-tch-blue, 0.8);
+        }
+    }
+
+    a {
+        padding: 0 20px;
+        font-size: 16px;
+        display: block;
+        line-height: 50px;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+.tab-content {
+    .transparent-background(@color-tch-blue, 0.8);
+    color: white;
+    margin-bottom: @panel-spacing;
+    position: relative;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        width: 1px;
+        background-color: #6b98c4;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:before {
+        left: 50%;
+    }
+
+    &:after {
+        left: 75%;
+    }
+
+    .cssgradients & {
+        background: linear-gradient(326deg, transparent, transparent 9%, rgba(35,115,191,0.8) 9%);
+    }
+
+    .tab-inner {
+        padding: 40px 0;
+    }
+
+    > div {
+        &.hidden {
+            display: none;
+        }
+
+        &.visible {
+            display: block;
+        }
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    a {
+        color: #b3d6ea;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    hr {
+        margin-top: 32px;
+    }
+
+    .button {
+        color: white;
+    }
+
+    .hr-text {
+        margin: 10px 0;
+        .opacity(0.3);
+
+        &:before,
+        &:after {
+            .opacity(1);
+        }
+    }
+
+    .content-column,
+    .dive-deeper-column,
+    .links-column {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .content-column {
+        padding: 0 40px;
+
+        header {
+            h1, h2 {
+                margin: 0;
+            }
+
+            h2 {
+                font-size: 20px;
+                line-height: 23px;
+                .ff-header-light;
+            }
+
+            h1 {
+                font-size: 40px;
+                line-height: 1;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .dive-deeper-column {
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        form {
+            margin-bottom: 0;
+        }
+
+        .input-button-pair {
+            @button-square-dimension: 46px;
+
+            .left {
+                margin-right: @button-square-dimension;
+                height: @button-square-dimension;
+                position: relative;
+            }
+
+            .right {
+                width: @button-square-dimension;
+            }
+
+            input[type=text] {
+                @vpadding: ((@button-square-dimension - 12px) / 2);
+                padding: @vpadding 12px;
+                font-size:14px;
+
+                .ie7 & {
+                    .border-box-off();
+                    height: (@button-square-dimension - @vpadding * 2);
+                    width:173px;
+                }
+            }
+
+            input[type=text], .button {
+                height: @button-square-dimension;
+            }
+
+            .icon-button {
+                width: @button-square-dimension;
+            }
+        }
+
+        .styled-dropdown {
+            .ff-header;
+            width: 100% !important;
+            font-size: 16px;
+        }
+    }
+
+    .links-column {
+        h1 {
+            font-size: 18px;
+        }
+
+        .quick-links {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 20px;
+
+            li {
+                line-height: 35px;
+                font-size:15px;
+                border-bottom: 1px solid #6a98c4;
+
+                &:first-child {
+                    border-top: 1px solid #6a98c4;
+                }
+            }
+
+            a {
+                display: block;
+                color: white;
+                text-decoration: none;
+                padding: 0 10px;
+
+                &:hover {
+                    background-color: #487fb5;
+                }
+            }
+        }
+
+        .extra-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 3px 0;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 14px;
+            }
+        }
+    }
+}

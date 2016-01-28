@@ -1,0 +1,17 @@
+{% extends 'layouts/interior-full-width.html' %}
+{% set current_section = 'locations' %}
+
+{% block breadcrumbs %}
+{% include 'partials/locations/location-landing/breadcrumbs.html' with { selected: 'Find A Location' } %}
+{% endblock %}
+
+{% block navigation %}
+{% include 'partials/locations/location-landing/navigation.html' with { selected: 'Find A Location' } %}
+{% endblock %}
+
+{% block primary_content %}
+<!-- START LOCATION LANDING SEARCH -->
+{% include 'partials/locations/location-landing/search_landing.html' %}
+<!-- END LOCATION LANDING SEARCH -->
+
+{% endblock %}

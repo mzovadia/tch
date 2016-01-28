@@ -1,0 +1,108 @@
+.physician-search-results {
+    .physician {
+        padding-bottom: 20px;
+        .inline-block;
+        color: #46545F;
+        font-size: 13px;
+        width: 100%;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eadfd8;
+        .one-fourth, .three-fourth {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        img {
+            max-width: 160px;
+        }
+        .physician-header {
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 59px;
+            font-size: 22px;
+            .ff-header;
+            color: @color-light-blue;
+            padding: 7px 10px;
+            margin-bottom: 10px;
+            position: relative;
+             &:hover {
+                color: #a0c4da;
+            }
+            
+            &.accepting:after {
+                content: 'Accepting New Patients';
+                color: #000;
+                display: block;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                padding: 10px;
+                width: 128px;
+                padding-right: 40px;
+                padding-top: 10px;
+                text-align: right;
+                font-size: 12px;
+                text-transform: uppercase;
+                .ie7 & {
+                    width: 150px;
+                }
+            }
+            &.accepting:before {
+                content: url(/assets/img/icons/checkmark.png);
+                position: absolute;
+                right: 0;
+                top: 5px;
+            }
+            span {
+                font-size: 13px;
+                .ff-pt-regular;
+                color: #333;
+                display: block;
+                font-weight: normal;
+                padding-top: 5px;
+                text-transform: uppercase;
+            }
+        }
+        h2 {
+            .ff-pt-bold;
+            font-size: 14px;
+            color: #082B54;
+            text-transform: uppercase;
+            margin: 0 0 8px 0;
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+        .location {
+            padding-left: 10px;
+            span {
+                display: block;
+                line-height: 1.5;
+            }
+            .phonenumber {
+                font-weight: bold;
+            }
+        }
+        ul {
+            margin: 0px;
+            list-style-image: none;
+            list-style-type: none;
+            padding: 0px;
+        }
+    }
+}
+.page-title {
+    h1 {
+        span {
+            color: @color-orange;
+
+        }
+    }
+    a {
+        color: @color-orange;
+        display: block;
+        float: right;
+        line-height: 5;
+    }
+}

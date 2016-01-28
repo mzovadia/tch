@@ -1,0 +1,24 @@
+{% extends 'layouts/interior.html' %}
+{% set current_section = 'ourphysicians' %}
+{% set script_component = 'physicians' %}
+{% set body_class = 'body-physicians body-search' %}
+
+{% block breadcrumbs %}
+{% include 'partials/physicians/physician-search/breadcrumbs.html' with { selected: 'Search Results' } %}
+{% endblock %}
+
+{% block navigation %}
+{% include 'partials/physicians/common/navigation.html' with { selected: 'Search Our Physicians' } %}
+{% endblock %}
+
+{% block header %}
+<header class="page-title clear">
+  <h1>Christ Hospital Behavioral Health Search Results <span>(3)</span></h1>
+</header>
+{% endblock %}
+
+
+{% block primary_content %}
+<!-- START PHYSICIAN SEARCH RESULTS -->
+{% include 'partials/physicians/physician-search/results.html' %}
+<!-- END PHYSICIAN SEARCH RESULTS -->

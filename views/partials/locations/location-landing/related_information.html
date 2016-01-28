@@ -1,0 +1,33 @@
+{% import '../../../macros/social_block.html' as block %}
+
+<section class="related-information">
+    <header>
+        <h1>Related Information</h1>
+        <a href="/" class="see-all">See All Updates For This Location</a>
+    </header>
+    <div class="social-grid">
+        <div class="blocks">
+            {{ block.news(
+                '/assets/img/community/cardio_team.jpg',
+                Date.parse('08-24-2013'),
+                'Our Cardiovascular Team Ranked in Top 5 in the US',
+                null,
+                'Read article'
+            ) }}
+
+            {{ block.news(
+                '/assets/img/community/parking_garage.jpg',
+                Date.parse('08-19-2013'),
+                'Visitors Garage Addition, Topping Off Ceremony',
+                null,
+                'Read article'
+            ) }}
+
+            {{ block.event(
+                Date.parse('08-23-2013'),
+                'Breaking the Pain Chain Health Seminar',
+                'Sept. 10, 17, 24 and Oct. 1,<br>6 - 8 p.m.<br><br>at Cincinnati Sports Club,<br>3950 Red Bank Road,<br>Cincinnati, OH 45227'
+            ) }}
+        </div>
+    </div>
+</section>

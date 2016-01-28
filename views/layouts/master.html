@@ -1,0 +1,119 @@
+<!doctype html>
+<!--[if lt IE 7]>     <html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
+<!--[if IE 7]>        <html class="lt-ie10 lt-ie9 lt-ie8 ie7" lang="en"><![endif]-->
+<!--[if IE 8]>        <html class="lt-ie10 lt-ie9 ie8" lang="en"><![endif]-->
+<!--[if IE 9]>        <html class="lt-ie10 ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>The Christ Hospital Health Network{% if page_title %} | {{ page_title }}{% endif %}</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- SEO -->
+    <meta name="description" content="">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="">
+    <meta property="og:url" content="{{ settings.rootUrl }}">
+    <meta property="og:image" content="{{ settings.rootUrl }}/assets/img/logo.png">
+    <meta property="og:description" content="">
+
+    <!-- STYLES -->
+    {% if settings.usingLESS %}
+    <link rel="stylesheet/less" type="text/css" href="/assets/less/main.less" />
+    <script>
+    // Development LESS settings - remove before deployment
+    window.less = {
+        env: 'development',
+        poll: 2500,
+        async: true
+    };
+    </script>
+    <script src="/js/vendor/less.min.js" type="text/javascript"></script>
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+    {% endif %}
+    <script src="/js/vendor/modernizr.custom.min.js"></script>
+
+    {% block head %}
+    {% endblock %}
+
+</head>
+<body class="{{ body_class }}" data-script-component="{{ script_component }}">
+
+<!-- START MOBILE FLYOUT -->
+{% include '../partials/layout/mobile_flyout.html' %}
+<!-- END MOBILE FLYOUT -->
+
+<div class="page">
+
+<!-- START NAVIGATION -->
+{% include '../partials/layout/top_nav.html' %}
+<!-- END NAVIGATION -->
+
+<div class="container">
+    <!-- START PAGE CONTENT -->
+    <main class="page-content">
+      {% block content %}{% endblock %}
+    </main>
+    <!-- END PAGE CONTENT -->
+
+    <!-- START FOOTER -->
+    {% include '../partials/layout/footer.html' %}
+    <!-- END FOOTER -->
+</div>
+
+</div>
+
+<!-- LOAD APPROPRIATE JQUERY FROM CDN WITH FALLBACK -->
+<!--[if gte IE 9]><!-->
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<![endif]-->
+<script>('jQuery' in window) || document.write(unescape("%3Cscript src='/js/vendor/jquery-1.10.2.min.js'%3E%3C/script%3E"));</script>
+<!-- IE POLYFILLS -->
+<!--[if lt IE 10]>
+<script src="/js/vendor/jquery.placeholder.js"></script>
+<![endif]-->
+<!--[if lt IE 8]>
+<script src="/js/vendor/IE8.js"></script>
+<![endif]-->
+
+<!-- SCRIPTS -->
+<script src="/js/app.js"></script>
+<script src="/js/vendor/jquery.uDropdown.js"></script>
+<script src="/js/vendor/jquery.isotope.js"></script>
+<script src="/js/vendor/jquery.uTabs.js"></script>
+<script src="/js/vendor/jquery-accessibleMegaMenu.js"></script>
+<script src="/js/vendor/picturefill.js"></script>
+<script src="/js/vendor/retina.js"></script>
+
+<script>
+console.log(jQuery);
+    $(function() {
+        console.log($);
+        console.log($('.mega'));
+        $('#mega').accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required 
+               to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+
+            openClass: "open",
+
+        });//.dcMegaMenu();
+    });
+</script>
+
+{% block scripts %}
+{% endblock %}
+
+</body>
+</html>

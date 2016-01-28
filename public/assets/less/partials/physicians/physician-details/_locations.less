@@ -1,0 +1,38 @@
+.physician-locations {
+    padding: 14px;
+    .styled-dropdown {
+        display: block;
+        line-height: 40px;
+
+        &:after {
+            line-height: 40px;
+            width: 40px;
+            font-size: 13px;
+            z-index: 9;
+        }
+
+        .label {
+            .ff-header;
+            font-size: 14px;
+            padding-right: 58px;
+        }
+
+        .dropdown-content {
+            background-color: white;
+
+            div {
+                padding: 0 0 0 10px;
+            }
+        }
+
+        &.open {
+            .dropdown-content {
+                padding: 20px 0 0 0 !important;
+
+                .ie7 & {
+                    padding: 20px 0 20px 0 !important;
+                }
+            }
+        }
+    }
+}

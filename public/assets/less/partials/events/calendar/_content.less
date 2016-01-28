@@ -1,0 +1,166 @@
+.body-calendar {
+    header {
+        .button {
+            span {
+                font-size:20px;
+                vertical-align: middle;
+                height: 26px;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+#event-calendar {
+    #calendar-navigation {
+        background-color: #0075BE;
+        height: 40px;
+        line-height: 40px;
+
+        .previous-month, .next-month {
+            .ff-header-light;
+            font-size: 17px;
+            text-decoration: none !important; 
+            position: relative;
+            color: #FFFFFF;
+
+            &:hover {
+                text-decoration: underline;
+
+                .ie7 & {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .previous-month {
+            float: left;
+            padding-left: 24px;
+            margin-left: 12px;
+
+            &:before {
+                .ff-icon;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                content: @icon-character-caret-left;
+                float: left;
+                line-height: 40px;
+                width: 12px;
+                font-size: 12px;
+                text-decoration:none;
+
+                .ie7 & {
+                    top: 1px;
+                }
+            }
+        }
+
+        .next-month {
+            float: right;
+            padding-right: 24px;
+            margin-right: 12px;
+
+            &:after {
+                .ff-icon;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 2;
+                content: @icon-character-caret-right;
+                float: right;
+                line-height: 40px;
+                width: 12px;
+                font-size: 12px;
+                text-decoration:none !important;
+                .ie7 & {
+                    top: 1px;
+                }
+            }
+        }
+
+        .current-month {
+            .ff-header;
+            color: #FFFFFF;
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+
+    #calendar {
+        border-collapse:collapse;
+        tr.week-days {
+            background: #335677;
+            height: 22px;
+
+            th {
+                width: 100%*(1/7);
+                font-size: 12px;
+                color: #D6DDE4;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: normal;
+                vertical-align: middle;
+            }
+        }
+
+        tr {
+            td {
+                vertical-align: top;
+                background-color: #F7FCFF;
+                border:1px solid #BABCBE;
+
+                .day-wrapper {
+                    min-height: 118px;
+                    padding: 8px;
+                }
+
+                .day-num {
+                    color: #0076BF;
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+
+                &.today {
+                    background-color: #FFF4E1;
+
+                    .day-num {
+                        color: #E77D1D;
+                    }
+                }
+
+                &.other-month {
+                    background-color: #FFFFFF;
+
+                    .day-num {
+                        color: #B9BBBE;
+                    }
+                }
+
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        padding: 10px 0 10px 0;
+                        margin: 0;
+                        border-bottom: 1px solid #C9E1F0;
+
+                        a {
+                            color: #0076BF;
+                            font-size: 12px;
+                            text-decoration: none;
+                            line-height: 13px;
+
+                            &:hover {
+                                color: #3a8ddb;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

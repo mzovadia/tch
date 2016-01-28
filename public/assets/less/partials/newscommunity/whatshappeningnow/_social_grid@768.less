@@ -1,0 +1,47 @@
+@color-community-all: #002d56;
+@color-community-news: @color-tch-blue;
+@color-community-video: #f8bb1b;
+@color-community-events: #80a1b6;
+@color-community-facebook: #3b5998;
+@color-community-instagram: #7e8083;
+
+.social-filter-nav {
+    margin: 0 -14px 16px;
+
+    li {
+        width: 100%;
+        margin: 0px;
+    }
+
+    &.no-grid-context {
+        a {
+            display: none;
+
+            &.selected {
+                display: block;
+            }
+        }
+    }
+
+    .social-button {
+        width: 100%;
+        text-align: center;
+
+        &.selected:after {
+            display: none;
+        }
+    }
+
+    .social-all {
+        display: none;
+    }
+
+    .separator {
+        display: none !important;
+    }
+}
+
+.social-block {
+    width: 100%;
+    margin-right: 0;
+}

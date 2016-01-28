@@ -1,0 +1,25 @@
+{% extends 'layouts/interior--3-column.html' %}
+{% set current_section = 'ourphysicians' %}
+{% set body_class = 'body-content' %}
+
+{% block breadcrumbs %}
+{% include 'partials/interior-content/common/breadcrumbs.html' with { selected: 'Section Landing Page' } %}
+{% endblock %}
+
+{% block navigation %}
+{% include 'partials/interior-content/common/navigation.html' with { selected: 'Section Landing Page' } %}
+{% endblock %}
+
+{% block header %}
+<img src="/assets/img/lg-placeholder.jpg" alt="">
+{% endblock %}
+
+{% block primary_content %}
+<!-- START CONTENT -->
+{% include 'partials/interior-content/interior-content/content.html' %}
+<!-- END CONTENT -->
+{% endblock %}
+
+{% block sidebar %}
+{% include 'partials/interior-content/common/sidebar.html' %}
+{% endblock %}

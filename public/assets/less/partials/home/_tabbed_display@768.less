@@ -1,0 +1,106 @@
+.tabbed-navigation {
+    header {
+        display:none;
+    }
+
+    ul {
+        width: 100%;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    li {
+        display: block;
+        line-height: 54px;
+        height: 54px;
+        text-align: left;
+        position: relative;
+        border-top: 1px solid #4d82b5;
+
+        &.selected a:after {
+            content: 'u';
+        }
+    }
+
+    a {
+        background-color: #2568a9;
+        line-height: 54px;
+
+        &:after {
+            .ff-icon;
+            position: absolute;
+            top: 0;
+            right: 20px;
+            z-index: 2;
+            content: 'd';
+            line-height: 54px;
+        }
+    }
+}
+
+.tab-content {
+    position: relative;
+    margin-bottom: 0;
+
+    &:before,
+    &:after {
+        display: none;
+    }
+
+    &,
+    .cssgradients & {
+        background: #275e92;
+    }
+
+    .tab-inner {
+        padding: 25px 0;
+    }
+
+    > div {
+        .transition(1s height ease-in-out);
+        overflow: hidden;
+
+        &.hidden {
+            display: block;
+            height: 0;
+        }
+    }
+
+    .content-column {
+        padding: 0 20px;
+
+        header {
+            h2 {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .dive-deeper-column {
+        border-color: #6b98c4;
+        border-color: rgba(255, 255, 255, 0.3);
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        padding: 20px 0;
+        margin: 30px 20px 18px;
+        width: auto;
+    }
+
+    .links-column {
+        .all-resources .button {
+            width: 100%;
+        }
+    }
+
+    hr {
+        margin-top: 24px;
+    }
+}

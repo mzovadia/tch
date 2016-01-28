@@ -1,0 +1,152 @@
+.location-search-results {
+    .location {
+        padding-bottom: 20px;
+        .inline-block;
+        color: #46545F;
+        font-size: 13px;
+        width: 100%;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eadfd8;
+
+        .one-third {
+            padding: 0 6px 0 0;
+        }
+
+        .one-fourth,
+        .three-fourth {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        img {
+            max-width: 160px;
+        }
+
+        .location-header {
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 59px;
+            font-size: 22px;
+            line-height: 22px;
+            .ff-header;
+            color: @color-light-blue;
+            margin-bottom: 10px;
+            padding-right: 135px;
+            position: relative;
+            &:hover {
+                color: #a0c4da;
+            }
+            p {
+                color: #000;
+                font-weight: normal;
+                margin-top: 0;
+            }
+            .distance {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                padding: 10px;
+                padding-top: 8px;
+                text-align: center;
+                font-size: 16px;
+                height: 59px;
+
+                .measure,
+                .unit {
+                    display: block;
+                    color: @color-orange;
+                    text-transform: uppercase;
+                }
+
+                .measure {
+                    font-size: 17px;
+                    line-height: 24px;
+                }
+
+                .unit {
+                    font-size: 16px;
+                    line-height: 17px;
+                }
+            }
+        }
+
+h1 span {
+    color: @color-orange;
+}
+        h2 {
+            .ff-pt-bold;
+            font-size: 14px;
+            color: #000;
+            text-transform: uppercase;
+            margin: 0 0 8px 0;
+        }
+
+        .address {
+            span {
+                display: block;
+                line-height: 1.5;
+            }
+
+            .phonenumber {
+                font-weight: bold;
+            }
+        }
+
+        .services {
+            li {
+                display: inline;
+
+                &:after {
+                    content: ',';
+                    margin-right: 2px;
+                }
+
+                &:last-child:after {
+                    display: none;
+                }
+            }
+        }
+
+        .hours {
+            dl, dd {
+                margin: 0;
+            }
+
+            dt, dd {
+                float: left;
+            }
+
+            dt {
+                clear: left;
+
+                &:after {
+                    content: '-';
+                    margin: 0 4px;
+                }
+
+                &:empty:after {
+                    display: none;
+                }
+            }
+
+            em {
+                display: block;
+                color: #a4a4a5;
+            }
+        }
+
+        ul {
+            margin: 0px;
+            list-style-image: none;
+            list-style-type: none;
+            padding: 0px;
+        }
+
+        &.sub-location {
+            .location-header {
+                color: @color-light-blue;
+            }
+        }
+    }
+}

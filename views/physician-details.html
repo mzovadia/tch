@@ -1,0 +1,24 @@
+{% extends 'layouts/interior.html' %}
+{% set current_section = 'ourphysicians' %}
+{% set script_component = 'physicians' %}
+{% set body_class = 'body-physicians body-search' %}
+
+{% block breadcrumbs %}
+{% include 'partials/physicians/physician-search/breadcrumbs.html' with { selected: 'Search Results' } %}
+{% endblock %}
+
+{% block navigation %}
+<div class="hide-mobile">
+{% include 'partials/physicians/physician-details/physician-info.html' %}
+</div>
+{% endblock %}
+
+{% block primary_content %}
+{% include 'partials/physicians/physician-details/content.html' %}
+
+<div class="hide-desktop">
+{% include 'partials/physicians/physician-details/physician-info.html' %}
+</div>
+
+{% include 'partials/physicians/physician-details/locations.html' %}
+{% endblock %}

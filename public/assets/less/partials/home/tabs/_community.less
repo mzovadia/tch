@@ -1,0 +1,67 @@
+.tab-content #community {
+    .content-column {
+        header {
+            .video-thumb {
+                position: relative;
+                margin-bottom: 4px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 0px;
+                    height: 0px;
+                    border-bottom: 70px solid #255f9a;
+                    border-left: 100px solid transparent;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    border-width: 0;
+
+                    .cssgradients & {
+                        background: linear-gradient(326deg, red, red 9%, transparent 9%);
+                    }
+                }
+            }
+
+            h1 {
+                font-size: 30px;
+                line-height: 1;
+                margin-bottom: 12px;
+            }
+        }
+
+        .or-watch-more {
+            .ff-header-light;
+            line-height: 46px;
+            margin-left: 6px;
+            font-size: 15px;
+            text-transform: uppercase;
+
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .dive-deeper-column {
+        header {
+            img {
+                margin-bottom: 14px;
+            }
+
+            h1 {
+                font-size: 22px;
+                line-height: 24px;
+                margin-bottom: 4px;
+            }
+        }
+
+        .button {
+            width: 100%;
+        }
+    }
+}

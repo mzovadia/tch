@@ -1,0 +1,65 @@
+.location-featured-image {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.wait-time {
+    background-color: @color-orange;
+    position: relative;
+    color: white;
+    height: 50px;
+    font-size: 0;
+
+    h1,
+    .separator,
+    .wait-label {
+        .inline-block;
+        line-height: 50px;
+        color:#FFFFFF;
+    }
+
+    h1 {
+        margin: 0;
+        margin-left: 16px;
+        font-size: 25px;
+    }
+
+    .separator {
+        width: 1px;
+        height: 34px;
+        position: relative;
+        top: 8px;
+        margin: 0 12px;
+        background-color: #c27272;
+    }
+
+    .wait-label {
+        font-size: 20px;
+        text-transform: uppercase;
+        position: relative;
+        top: -2px;
+    }
+
+    .directions {
+        position: absolute;
+        right: 52px;
+        top: 50%;
+        margin-top: -17px;
+        font-size: 13px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        color: #f9e2c3;
+
+        .no-cssgradients & {
+            right: 16px;
+        }
+    }
+
+    .button.orange {
+        .colored-button(#e87d1e);
+    }
+}
+

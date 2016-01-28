@@ -1,0 +1,7 @@
+.colored-button(@background-color, @lighten: @button-hover-lighten) {
+    background-color: @background-color;
+
+    &:hover {
+        background-color: lighten(@background-color, @lighten);
+    }
+}

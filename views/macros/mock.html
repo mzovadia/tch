@@ -1,0 +1,19 @@
+{% macro navigation(labels, selected, classes) %}
+<ul class="page-navigation {{ classes }}">
+  {% for i, label in labels %}
+  <li {% if selected == label %}class="selected"{% endif %}>
+    <a href="/">{{ label }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro breadcrumbs(order) %}
+<ul class="breadcrumbs">
+  {% for i, label in order %}
+  <li {% if loop.last %}class="selected"{% endif %}>
+    <a href="/">{{ label }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endmacro %}

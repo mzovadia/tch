@@ -1,0 +1,69 @@
+{% import '../../macros/calendar_day.html' as block %}
+
+<div id="event-calendar">
+    <div id="calendar-navigation">
+        <a href="" class="previous-month">September</a>
+        <a href="" class="next-month">November</a>
+        <div class="current-month">October 2013</div>
+    </div>
+    <table id="calendar" border="0" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="week-days">
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {{ block.day('other-month', '29', '') }}
+                {{ block.day('other-month', '30', '') }}
+                {{ block.day('current-month', '1', [ "Breaking the Pain Chain" ]) }}
+                {{ block.day('current-month', '2', [ "Controlling High Blood Pressure: When Medications Aren't Enough" ]) }}
+                {{ block.day('current-month', '3', '') }}
+                {{ block.day('current-month', '4', '') }}
+                {{ block.day('current-month', '5', [ "Lamaze One-day Course", "Breastfeeding Class" ]) }}
+            </tr>
+            <tr>
+                {{ block.day('current-month', '6', '') }}
+                {{ block.day('current-month', '7', '') }}
+                {{ block.day('current-month', '8', '') }}
+                {{ block.day('current-month', '9', '') }}
+                {{ block.day('current-month', '10', '') }}
+                {{ block.day('current-month', '11', '') }}
+                {{ block.day('current-month', '12', [ "Lamaze One-day Course", "Save-A-Baby Class" ]) }}
+            </tr>
+            <tr>
+                {{ block.day('current-month', '13', '') }}
+                {{ block.day('current-month', '14', '') }}
+                {{ block.day('current-month', '15', '') }}
+                {{ block.day('current-month', '16', '') }}
+                {{ block.day('current-month', '17', '') }}
+                {{ block.day('current-month', '18', '') }}
+                {{ block.day('current-month', '19', [ "Lamaze One-day Course", "Curious Couples Tour" ]) }}
+            </tr>
+            <tr>
+                {{ block.day('current-month', '20', '') }}
+                {{ block.day('current-month', '21', '') }}
+                {{ block.day('current-month', '22', [ "Breastfeeding Class" ]) }}
+                {{ block.day('current-month', '23', '') }}
+                {{ block.day('current-month', '24', '') }}
+                {{ block.day('current-month today', '25', '') }}
+                {{ block.day('current-month', '26', [ "Lamaze One-day Course" ]) }}
+            </tr>
+            <tr>
+                {{ block.day('current-month', '27', '') }}
+                {{ block.day('current-month', '28', [ "Save-A-Baby Class" ]) }}
+                {{ block.day('current-month', '29', '') }}
+                {{ block.day('current-month', '30', '') }}
+                {{ block.day('current-month', '31', '') }}
+                {{ block.day('other-month', '1', '') }}
+                {{ block.day('other-month', '2', [ "Lamaze One-day Course", "Save-A-Baby Class", "Curious Couples Tour", "OB/GYN & Certified Nurse Midwife Open House" ]) }}
+            </tr>
+        </tbody>
+    </table>
+</div>

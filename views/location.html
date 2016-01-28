@@ -1,0 +1,27 @@
+{% extends 'layouts/interior.html' %}
+{% set current_section = 'locations' %}
+
+{% block breadcrumbs %}
+{% include 'partials/locations/common/breadcrumbs.html' with { selected: 'The Christ Hospital' } %}
+{% endblock %}
+
+{% block navigation %}
+{% include 'partials/locations/common/navigation.html' with { selected: 'About the Hospital' } %}
+{% endblock %}
+
+{% block header %}
+<header class="page-title">
+  <h1>About the Hospital</h1>
+</header>
+{% endblock %}
+
+{% block primary_content %}
+<!-- START WAIT TIME -->
+{% include 'partials/locations/location/wait_time.html' %}
+<!-- END WAIT TIME -->
+
+<!-- START CONTENT -->
+{% include 'partials/locations/location/content.html' %}
+<!-- END CONTENT -->
+
+{% endblock %}

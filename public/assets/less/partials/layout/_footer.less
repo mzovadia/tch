@@ -1,0 +1,255 @@
+.page-footer {
+    border-top: 8px solid @color-dark-blue;
+    clear: both;
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.newsletter-signup {
+    padding: 15px 0;
+    background: #234E77;
+    margin-bottom: @panel-spacing;
+
+    header {
+        .inline-block;
+
+        h1 {
+            color: #FFFFFF;
+            font-size: 32px;
+            margin: 0px;
+        }
+
+        h2 {
+            color: #B2D6EA;
+            margin: 0px;
+            .ff-droid-regular;
+            font-size: 16px;
+        }
+    }
+}
+
+.newsletter-form {
+    text-align: right;
+    margin-top:7px;
+
+    input, button, .styled-dropdown {
+        margin: 0;
+        vertical-align: top;
+        font-size: 14px;
+        height: 46px;
+    }
+
+    input[type=text] {
+        width: 200px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        color: #475560;
+    }
+
+    .styled-dropdown {
+        margin-left: -5px;
+        text-align: left;
+        width: 38% !important;
+    }
+
+    button {
+        margin-left: -4px;
+    }
+
+    .styled-dropdown:before {
+        content: '';
+        width: 1px;
+        height: 26px;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background-color: #a3b5c3;
+    }
+}
+
+.ie7 {
+    .newsletter-form {
+        button {
+            .border-box-off();
+        }
+    }
+}
+
+.footer-network {
+    padding-left: 40px;
+    background: #dfe1e3 url('/assets/img/black-chhn-logo.png') 25px 0 no-repeat;
+    color: white;
+    a {
+        color: #b3d6ea;
+        &:hover {
+            color: white;
+        }
+    }
+    ul {
+        list-style-type: none;
+    }
+    > ul {
+        margin-left: 150px;
+        margin-top: 20px;
+        position: relative;
+        > li {
+            color: #000;
+            display: inline-block;
+            vertical-align: top;
+            width: 20%;
+            .ff-pt-regular;
+            span {
+                padding-left: 8px;
+                .ff-pt-bold;
+                text-transform: uppercase;
+            }
+        }
+        > li:first-child {
+            .ff-pt-bold;
+            a {
+                padding: 8px 0;
+                text-decoration: underline;
+            }
+            a:hover {
+                background: transparent;
+            }
+        }
+        a {
+            color: #000;
+            display: block;
+            font-size: 12px;
+            padding: 4px 8px;
+            text-decoration: none;
+            &:hover {
+                background: #ccc;
+                color: #000;
+            }
+        } 
+        .social {
+            padding-left: 0;
+            position: absolute;
+            right: 20px;
+            bottom: 0;
+            li {
+                display: inline-block;
+                margin-right: 8px;
+                width: 18%;
+            }
+             a.twitter, a.facebook, a.instagram, a.linkedin {
+                display: block;
+                height: 29px;
+                width: 29px;
+                opacity: .75;
+                &:hover {
+                    opacity: 1;
+                }
+            } 
+            a.twitter{
+                background: url(/assets/img/icons/twitter.png) top left no-repeat;   
+            }
+            a.facebook {
+                background: url(/assets/img/icons/facebook.png) top left no-repeat;   
+            }
+            a.instagram {
+                background: url(/assets/img/icons/instagram.png) top left no-repeat;   
+            }
+            a.linkedin {
+                background: url(/assets/img/icons/linkedin.png) top left no-repeat;   
+            }
+        }
+    }
+
+    .button {
+        color: white;
+    }
+
+    header > h2,
+    .search-form label {
+        .ff-header;
+        color: white;
+        font-size: 14px;
+        line-height: 1.2;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .address {
+        .logo {
+            .inline-block;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            width: 235px;
+            height: 77px;
+            background-repeat: no-repeat;
+            background-position: center top;
+
+            .svg & {
+                background-image: url('/assets/img/logo_mono_light.svg');
+            }
+
+            .no-svg & {
+                background-image: url('/assets/img/black_chhn_logo.png');
+            }
+        }
+
+        span {
+            display: block;
+        }
+
+        a {
+            display: block;
+            margin-top: 5px;
+            color: #FFFFFF;
+        }
+    }
+
+    .navigate {
+        padding-top: 38px;
+
+        ul {
+            margin: 0;
+            list-style-type: none;
+            padding: 0;
+        }
+    }
+
+    .sitemap {
+        padding: 0 60px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .find {
+        padding-left: 0;
+
+        .social {
+            font-size: 0;
+            .button {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                margin-right: 5px;
+            }
+        }
+
+        .input-button-pair {
+            margin: 8px 0 12px;
+        }
+    }
+}
+
+.copyright {
+    background-color: @color-grey;
+    width: 100%;
+    color: #000;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 4px 0 5px 20px;
+
+    a {
+        color:#839FB6;
+    }
+}

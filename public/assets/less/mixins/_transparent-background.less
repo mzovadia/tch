@@ -1,0 +1,9 @@
+.transparent-background(@hex, @opacity: 1) {
+  @rgba: rgba(red(@hex), green(@hex), blue(@hex), @opacity);
+  @argb: argb(@rgba);
+  background: transparent;
+  background-color: @rgba;
+  zoom: 1;
+  *filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{argb}',endColorstr='@{argb}');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{argb},endColorstr=@{argb})";
+}

@@ -1,0 +1,141 @@
+.post-content-wrapper {
+    .post-title {
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            color: @default-text-color;
+            font-size: 30px;
+            line-height: 35px;
+            text-transform: none;
+            margin: 0;
+        }
+    }
+
+    hr {
+        margin-top: 18px;
+    }
+
+    .metadata {
+        .ff-header;
+        margin: 10px 0;
+        line-height: 20px;
+        position: relative;
+        height: 20px;
+
+        time {
+            font-size: 16px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #babcbe;
+        }
+
+        .facebook-share {
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: right;
+        }
+    }
+
+    .community-section-barrier,
+    .featured-image {
+        border-top-width: 9px;
+        border-top-style: solid;
+    }
+
+    .featured-image {
+        .inline-block;
+        position: relative;
+        width: 100%;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+    }
+
+    .video-thumb {
+        .play-button {
+            background: none;
+            width: 0;
+            height: 0;
+            border-top: 63px solid transparent;
+            border-bottom: 63px solid transparent;
+            border-left: 120px solid white;
+            margin-left: -60px;
+            margin-top: -63px;
+            .opacity(0.7);
+        }
+
+        &:hover {
+            .play-button {
+                .opacity(1);
+            }
+        }
+    }
+
+    &.post-video {
+        .community-section-barrier,
+        .featured-image {
+            border-top-color: @color-community-video;
+        }
+    }
+
+    &.post-news {
+        .community-section-barrier,
+        .featured-image {
+            border-top-color: @color-community-news;
+        }
+    }
+
+    &.post-events {
+        .community-section-barrier,
+        .featured-image {
+            border-top-color: @color-community-events;
+        }
+    }
+
+    .post-body {
+        padding: 20px 0 1px;
+    }
+
+    .post-social-share .facebook-mini {
+        display: none;
+    }
+
+    .event-info {
+        margin-bottom: 20px;
+
+        .event-label {
+            font-size: 14px;
+            color: #092B55;
+            .ff-droid-bold;
+            margin-right: 10px;
+            width: 100px;
+            text-transform: uppercase;
+            vertical-align: top;
+            .inline-block
+        }
+
+        .event-content {
+            width: 410px;
+            margin: 0px;
+            vertical-align: top;
+            .inline-block
+        }
+
+         
+    }
+
+
+        
+}
+    .event-detail .event-info  .event-content{
+             
+                width: 650px;
+            }

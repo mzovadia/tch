@@ -1,0 +1,22 @@
+{
+  "name": "christ-hospital",
+  "private": true,
+  "version": "1.0.0",
+  "author": "US Digital Partners",
+  "license": "All Rights Reserved",
+  "dependencies": {
+    "express": "~3.3.5",
+    "consolidate": "~0.9.1",
+    "swig": "~1.0.0-rc1",
+    "underscore": "~1.5.1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-cssmin": "0.6.1",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-markdown": "~0.4.0",
+    "wrench": "~1.5.1"
+  }
+}

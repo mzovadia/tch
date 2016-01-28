@@ -1,0 +1,25 @@
+{% extends 'layouts/interior.html' %}
+{% set body_class = 'body-calendar' %}
+{% set current_section = 'calender' %}
+
+{% block breadcrumbs %}
+{% include 'partials/newscommunity/common/breadcrumbs.html' with { selected: "Calendar of Events" } %}
+{% endblock %}
+
+{% block navigation %}
+{% include 'partials/newscommunity/common/navigation.html' with { selected: "Calendar of Events" } %}
+{% endblock %}
+
+{% block header %}
+<header class="page-title event-list-header">
+  <a class="button orange"><span aria-hidden="true" class="icon icon-menu"> </span>Switch to List View</a>
+  <h1>Calendar of Events</h1>
+  <h2>October 2013</h2>
+</header>
+{% endblock %}
+
+{% block primary_content %}
+<!-- START CONTENT -->
+{% include 'partials/events/calendar.html' %}
+<!-- END CONTENT -->
+{% endblock %}

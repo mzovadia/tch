@@ -1,0 +1,38 @@
+{% extends 'master.html' %}
+{% set body_class = body_class + ' body-interior' %}
+
+{% block content %}
+
+<div class="interior-content full">
+ <!-- START TITLE BAR -->
+  <!-- <div class="full-width">
+  {% block title_bar %}
+  {% endblock %}
+  </div> -->
+  <!-- END TITLE BAR -->
+
+  <!-- START BREADCRUMBS -->
+  <nav class="full-width breadcrumbs-nav">
+  {% block breadcrumbs %}
+  {% endblock %}
+  </nav>
+  <!-- END BREADCRUMBS -->
+
+  <!-- START INTERIOR PRIMARY CONTENT -->
+  <div class="content-container">
+  {% block header %}
+  {% endblock %}
+
+    <div class="primary-content">
+    {% block primary_content %}
+    {% endblock %}
+    </div>
+  </div>
+  <!-- END INTERIOR PRIMARY CONTENT -->
+
+  <div class="clear"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'layouts/home.html' %}
+{% set script_component = 'home' %}
+{% set body_class = 'body-home' %}
+{% set current_section = 'home' %}
+
+{% block content %}
+
+{% include 'partials/home/content.html' %}
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/js/vendor/jquery.uTabs.js"></script>
+{% endblock %}

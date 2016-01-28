@@ -1,0 +1,195 @@
+.search-options {
+    border-right: 1px solid #e0e2e4;
+    padding: 0 20px 20px 20px;
+    .return-to-results {
+        display: block;
+        width: 190px;
+        background: #F19824;
+        .ff-pt-bold;
+        line-height: 36px;
+        height: 36px;
+        font-size: 14px;
+        color: #FFFFFF;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .refine-options-expand {
+        text-transform: uppercase;
+        .ff-pt-regular;
+        font-size: 14px;
+        margin: 20px 0 8px;
+        padding: 0 2px;
+        color: #000;
+        font-weight: normal;
+        -webkit-appearance: none;
+        border: 0;
+        background: none;
+        outline: 0;
+        cursor: pointer;
+    }
+
+    h2 {
+        .ff-tahoma-regular;
+        font-weight: bold;
+        color: #F29925;
+        font-size: 14px;
+        line-height: 161%;
+        margin-bottom: 10px;
+    }
+
+    .refine-options {
+        .no-animate;
+        padding: 10px;
+        margin-bottom: 30px;
+
+        > :first-child {
+            margin-top: 0;
+        }
+
+        hr {
+            margin: 10px 0px;
+        }
+
+        [class="styled-dropdown"] {
+            .animate;
+            width: 100% !important;
+        }
+
+        #txtZipCode {
+            background: #fff;
+            border: 1px solid #A3A3A5;
+            width: 100%;
+            margin-bottom: 5px;
+            color: #46545F;
+            line-height: 30px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        // .styled-dropdown {
+        //     width: 170px !important;
+        //     margin-bottom: 5px;
+        //     font-size: 14px;
+        //     .ff-tahoma-regular;
+        //     font-weight: bold;
+        //     height: 30px;
+        //     line-height: 30px;
+
+        //     &:after {
+        //         line-height: 30px;
+        //         width: 30px;
+        //         height: 30px;
+        //     }
+
+        //     ul {
+        //         top: auto;
+        //     }
+        // }
+
+        button {
+            background: @color-orange;
+            width: 100%;
+            font-size: 14px;
+            text-align: left;
+            .ff-pt-regular;
+            font-weight: bold;
+            padding: 0px;
+            height: 30px;
+            line-height: 30px;
+            margin-top: 8px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+
+            &:checked + label {
+                font-weight: bold;
+
+                &:before {
+                    background: #082A55;
+                }
+            }
+        }
+
+        .lt-ie9 & input[type="checkbox"] {
+            display: inline;
+            zoom: 1;
+            border: none;
+            padding: 0px;
+            width: 9%;
+            vertical-align: top;
+        }
+
+        .ie8 & input[type="checkbox"]{
+            margin-top:4px;
+        }
+
+        .checkboxlabel {
+            .inline-block;
+            line-height: 20px;
+            padding-left: 20px;
+            position: relative;
+            cursor: pointer;
+            .ff-pt-regular;
+            font-size: 14px;
+            color: #2D3F4F;
+            margin-bottom: 5px;
+            width: 100%;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                .animate;
+                background: #dfe1e3;
+                border: 1px solid #A3A3A5;
+                left: 0px;
+                top: 3px;
+            }
+
+            &:hover:before {
+                background: #666;
+            }
+        }
+
+        .lt-ie9 & .checkboxlabel {
+            width: 90%;
+            .inline-block;
+            vertical-align: top;
+            padding-left: 5px;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.search-results {
+    .search-pagination {
+        text-align: center;
+
+        .pagination-option {
+            .inline-block;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 13px;
+            .ff-droid-bold;
+            margin-right: 3px;
+            border: 1px solid grey;
+            text-decoration: none;
+            color: #717171;
+
+            &:hover, &.selected {
+                color: #FFFFFF;
+                background: #2272BE;
+            }
+        }
+    }
+}

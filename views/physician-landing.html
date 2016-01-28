@@ -1,0 +1,15 @@
+{% extends 'layouts/interior-full-width.html' %}
+{% set current_section = 'ourphysicians' %}
+{% set body_class = 'body-physicians' %}
+
+{% block breadcrumbs %}
+{% include 'partials/physicians/physician-landing/breadcrumbs.html' with { selected: 'Our Physicians' } %}
+{% endblock %}
+
+{% block primary_content %}
+
+<!-- START PHYSICIAN LANDING CONTENT -->
+{% include 'partials/physicians/physician-landing/content.html' %}
+<!-- END PHYSICIAN LANDING CONTENT -->
+
+{% endblock %}

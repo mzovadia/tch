@@ -1,0 +1,162 @@
+.location-content {
+    margin-top: 35px;
+}
+
+.hospital-info {
+    padding: 0;
+
+    .map,
+    .address {
+        padding-left: 0;
+    }
+
+    .map {
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+    }
+
+    .map-address {
+        position: relative;
+    }
+
+    .address {
+        h1 {
+            margin: 8px 0;
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        span {
+            display: block;
+        }
+
+        .directions {
+            position: absolute;
+            bottom: 0;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    h2 {
+        margin: 25px 0 12px;
+    }
+}
+
+.hospital-resources {
+    padding-right: 0;
+    padding-left: 28px;
+
+    hr {
+        margin: 18px 0;
+    }
+
+    .heading-with-sub {
+        margin-bottom: 6px;
+
+        h1,
+        h2 {
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+}
+
+.resource-button {
+    display: block;
+    color: white;
+    text-decoration: none;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &:hover {
+        color: white;
+    }
+
+    &.blue {
+        background-color: #1d5db1;
+
+        .label {
+            background-color: #0f3766;
+        }
+    }
+
+    &.orange {
+        .label {
+            background-color: #f8bb1b;
+        }
+    }
+
+    .title,
+    .subtitle,
+    .description {
+        margin: 0;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    .title,
+    .subtitle {
+        line-height: 1;
+    }
+
+    .title {
+        .ff-header-light;
+        font-size: 16px;
+    }
+
+    .subtitle {
+        display: block;
+        font-size: 24px;
+    }
+
+    .description {
+        margin-top: 12px;
+        margin-bottom: 20px;
+        font-size: 13px;
+        line-height: 17px;
+    }
+
+    .label {
+        position: relative;
+        .ff-header;
+        color: white;
+        cursor: pointer;
+        text-align: left;
+        display: block;
+        width: 100%;
+        border: none;
+        height: 46px;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 14px 0 14px 18px;
+
+        .cssgradients &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-right: 33px solid white;
+            border-top: 46px solid transparent;
+        }
+
+        .ie7 & {
+            .border-box-off;
+        }
+    }
+}

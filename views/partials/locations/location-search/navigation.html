@@ -1,0 +1,42 @@
+
+
+<div class="search-options physician-search-options">
+
+    <!-- EXPANDER -->
+    <button id="btnRefineSearch" class="refine-options-expand">Refine Your Search</button>
+
+    <div class="refine-options">
+        <!-- LOCATION -->
+        <h2>Near Me</h2>
+        <input type="text" id="txtZipCode" placeholder="Zip Code">
+                <label for="ddlZipCodeRadius" class="visually-hidden">Radius</label>
+                <select id="ddlZipCodeRadius" class="styled-dropdown">
+                    <option>5 Miles</option>
+                    <option>15 Miles</option>
+                    <option>25 Miles</option>
+                    <option>50 Miles</option>
+                </select>
+        <button type="submit" class="button ">Submit</button>
+
+        <!-- LOCATION TYPE -->
+        <h2>Location Type</h2>
+        <input id="checkbox1" type="checkbox"><label class="checkboxlabel" for="checkbox1"> Heart &amp; Vascular ()</label>
+        <input id="checkbox2" type="checkbox"><label class="checkboxlabel" for="checkbox2"> Hematology &amp; Oncology ()</label>
+        <input id="checkbox3" type="checkbox"><label class="checkboxlabel" for="checkbox3"> Imaging &amp; Testing Centers ()</label>
+        <input id="checkbox4" type="checkbox"><label class="checkboxlabel" for="checkbox4"> Joint &amp; Spine ()</label>
+        <input id="checkbox5" type="checkbox"><label class="checkboxlabel" for="checkbox5"> Laboratory Services ()</label>
+        <input id="checkbox6" type="checkbox"><label class="checkboxlabel" for="checkbox6"> Obstetrics &amp; Gynocology ()</label>
+        <input id="checkbox7" type="checkbox"><label class="checkboxlabel" for="checkbox7"> Orthopedics &amp; Sports Medicine ()</label>
+        <input id="checkbox8" type="checkbox"><label class="checkboxlabel" for="checkbox8"> Physical &amp; Occupational Therapy ()</label>
+        <input id="checkbox9" type="checkbox"><label class="checkboxlabel" for="checkbox9"> Primary Care ()</label>
+        <input id="checkbox10" type="checkbox"><label class="checkboxlabel" for="checkbox10"> Rheumatology ()</label>
+        <input id="checkbox11" type="checkbox"><label class="checkboxlabel" for="checkbox11"> Surgical Services ()</label>
+        <input id="checkbox12" type="checkbox"><label class="checkboxlabel" for="checkbox12"> Urology ()</label>
+    </div>
+</div>
+
+{{ mock.navigation([
+    'Find By Name',
+    'Find By Specialty',
+    'Find By Location'
+]) }}

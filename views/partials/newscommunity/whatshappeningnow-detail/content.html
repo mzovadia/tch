@@ -1,0 +1,15 @@
+<div class="container" data-content>
+    <div class="two-third post-content-wrapper {% if content %}post-{{ content }}{% endif %}">
+        {% if content %}
+        {% set content_include = 'content-' + content + '.html' %}
+        {% include content_include %}
+        {% endif %}
+    </div>
+    <div class="one-third post-sidebar-wrapper">
+        {% include 'sidebar.html' %}
+        {% if content %}
+        {% set sidebar_include = 'sidebar-' + content + '.html' %}
+        {% include sidebar_include %}
+        {% endif %}
+    </div>
+</div>

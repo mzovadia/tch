@@ -1,0 +1,95 @@
+.contact-us {
+    margin-top: 30px;
+
+    h1 {
+        margin-top:0px;
+        margin-bottom:20px;
+    }
+}
+
+.physician-landing {
+    .photo-cell {
+        padding-right: 0;
+    }
+   img {
+    float: right;
+    max-width: 100%;
+    height: auto;
+   }
+   input[type="text"] {
+    position: relative;
+    width: 100%;
+   }
+   .input-button-pair {
+    margin-left: 60px;
+   }
+   .icon-attach {
+    margin: 35px 0 28px 0;
+    padding-left: 60px;
+   }
+   .icon-attach:before {
+    content: url(/assets/img/icons/Physician-icon-gold.png);
+    position: absolute;
+    left: 22px;
+    top: 144px;
+   }
+   .button-wrap {
+    text-align: center;
+   }
+   .advanced-search {
+    margin-top: 50px;
+    position: relative;
+    &:before {
+        content: '';
+        display: block;
+        width: 1px;
+        position: absolute;
+        background: #dfe1e3 url(images/separator-gradient.png) bottom center no-repeat;
+        top: 45px;
+        bottom: 50px;
+        left: 50%;
+    }
+    h2 {
+        border-bottom: 1px solid @color-grey;
+        color: #000;
+        padding: 0 0 8px 20px; 
+    }
+    h3 {
+        font-size: 14px;
+    }
+    div[class="styled-dropdown"] {
+        margin-bottom: 12px;
+        width: 100% !important;
+    }
+    // .zip {
+    //     width: 85px;
+    // }
+    .one-half {
+        width: 45%;
+        &:last-child {
+            float: right;
+            padding-right: 0;
+        }
+    }
+    .last-name {
+        margin-top: 50px;
+        padding-left: 0;
+        ul {
+            margin-top: 0;
+            padding-left: 0;
+        }
+        a {
+            display: block;
+            padding: 6px;
+            text-decoration: none;
+            &:hover {
+                background: @color-light-blue;
+                color: #fff;
+            }
+        }
+        li {
+            display: inline-block;
+        }
+    }
+   }
+}

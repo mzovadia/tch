@@ -1,0 +1,57 @@
+
+
+<div class="search-options physician-search-options">
+
+    <!-- EXPANDER -->
+    <button id="btnRefineSearch" class="refine-options-expand">Refine Your Search</button>
+
+    <div class="refine-options">
+        <!-- LOCATION -->
+        <h2>Near Me</h2>
+        <input type="text" id="txtZipCode" placeholder="Zip Code">
+                <label for="ddlZipCodeRadius" class="visually-hidden">Radius</label>
+                <select id="ddlZipCodeRadius" class="styled-dropdown">
+                    <option>5 Miles</option>
+                    <option>15 Miles</option>
+                    <option>25 Miles</option>
+                    <option>50 Miles</option>
+                </select>
+        <button type="submit" class="button ">Submit</button>
+
+        <!-- ACCEPTING NEW PATIENTS -->
+        <h2>Accepting New Patients</h2>
+        <input id="checkbox9" type="checkbox"><label class="checkboxlabel" for="checkbox9"> Doesn't Matter (532)</label>
+        <input id="checkbox10" type="checkbox"><label class="checkboxlabel" for="checkbox10"> Yes (323)</label>
+
+        <!-- GENDER -->
+        <h2>Gender</h2>
+        <input id="checkbox1" type="checkbox"><label class="checkboxlabel" for="checkbox1"> Male (285)</label>
+        <input id="checkbox2" type="checkbox"><label class="checkboxlabel" for="checkbox2"> Female (238)</label>
+
+        <!-- LANGUAGE SPOKEN -->
+        <h2>Language Spoken</h2>
+        <input id="checkbox3" type="checkbox"><label class="checkboxlabel" for="checkbox3"> English (532)</label>
+        <input id="checkbox4" type="checkbox"><label class="checkboxlabel" for="checkbox4"> Spanish (532)</label>
+        <input id="checkbox5" type="checkbox"><label class="checkboxlabel" for="checkbox5"> French (532)</label>
+        <input id="checkbox6" type="checkbox"><label class="checkboxlabel" for="checkbox6"> German (532)</label>
+        <input id="checkbox7" type="checkbox"><label class="checkboxlabel" for="checkbox7"> Italian (532)</label>
+
+        <!-- SERVICES -->
+        <h2>Specialty</h2>
+        <input id="checkbox11" type="checkbox"><label class="checkboxlabel" for="checkbox11"> Heart &amp; Vascular (285)</label>
+        <input id="checkbox12" type="checkbox"><label class="checkboxlabel" for="checkbox12"> Oncology (123)</label>
+        <input id="checkbox13" type="checkbox"><label class="checkboxlabel" for="checkbox13"> Joint, Spine, &amp; Sports Medicine (532)</label>
+        <input id="checkbox14" type="checkbox"><label class="checkboxlabel" for="checkbox14"> Women's Health (532)</label>
+        <input id="checkbox15" type="checkbox"><label class="checkboxlabel" for="checkbox15"> Primary Care &amp; Comprehensive Medicine  (532)</label>
+        <input id="checkbox16" type="checkbox"><label class="checkboxlabel" for="checkbox16"> Surgical Services (123)</label>
+        <input id="checkbox17" type="checkbox"><label class="checkboxlabel" for="checkbox17"> Geriatrics (123)</label>
+        <input id="checkbox18" type="checkbox"><label class="checkboxlabel" for="checkbox18"> Research (123)</label>
+        <input id="checkbox19" type="checkbox"><label class="checkboxlabel" for="checkbox19"> Additional Services (123)</label>
+    </div>
+</div>
+
+{{ mock.navigation([
+    'Find By Name',
+    'Find By Specialty',
+    'Find By Location'
+]) }}

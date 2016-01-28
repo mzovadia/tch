@@ -1,0 +1,12 @@
+{% macro day(classes, day, events) %}
+<td class="{{ classes }}">
+    <div class="day-wrapper">
+        <div class="day-num">{{ day }}</div>
+        <ul class="event-listing">
+            {% for event in events %}
+                <li><a href="">{{ event }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</td>
+{% endmacro %}

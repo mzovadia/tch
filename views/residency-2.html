@@ -1,0 +1,24 @@
+{% extends 'layouts/interior.html' %}
+{% set current_section = 'services' %}
+{% set body_class = 'body-residency' %}
+
+{% block breadcrumbs %}
+{% include 'partials/residency/common/breadcrumbs.html' with { selected: 'Preliminary Interns' } %}
+{% endblock %}
+
+{% block navigation %}
+{% include 'partials/residency/common/navigation.html' with { selected: 'Preliminary Interns' } %}
+{% endblock %}
+
+{% block header %}
+<header class="page-title heading-with-sub">
+  <h1>Internal Medicine Residency Program</h1>
+  <h2>Preliminary Interns</h2>
+</header>
+{% endblock %}
+
+{% block primary_content %}
+<!-- START CONTENT -->
+{% include 'partials/residency/residency2/content.html' %}
+<!-- END CONTENT -->
+{% endblock %}

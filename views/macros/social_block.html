@@ -1,0 +1,81 @@
+{% macro block(category, image, date, title, content, moretext) %}
+<article class="social-block block-{{ category|lower }}">
+  {% if image %}
+    {% if category == 'video' %}
+    <a href="/" class="featured-image video-thumb">
+      <img src="{{ image }}" alt="{{ title }}">
+      <span class="mask"></span>
+      <span class="visually-hidden">Play</span>
+      <span aria-hidden="true" class="play-button"></span>
+    </a>
+    {% else %}
+    <a href="/" class="featured-image">
+      <img src="{{ image }}" alt="{{ title }}">
+    </a>
+    {% endif %}
+  {% endif %}
+  <section class="metadata">
+    <span class="category">
+      <span aria-hidden="true" class="icon icon-{{ category|lower }}"></span>
+      <span class="label">{{ category|title }}</span>
+    </span>
+    {% if category != 'events' %}
+        <time datetime="{{ date|date('c') }}">{{ date|date('M j') }}</time>
+    {% else %}
+        <time datetime="{{ date|date('c') }}">{{ date|date('M j, g:ia') }}</time>
+    {% endif %}
+  </section>
+  {% if title %}
+  <header class="header">
+    <a href="/">
+      <h1>{{ title }}</h1>
+    </a>
+  </header>
+  {% endif %}
+    {% if content %}
+      {% if category != 'events' %}
+          <p class="excerpt">
+            {{ content|raw }}
+          </p>
+      {% else %}
+            <div class="event-info">
+            <div class="event-label">Location:</div>
+            <p class="event-content">
+                {{ content|raw }}
+            </p>
+        </div>
+      {% endif %}
+    {% endif %}
+  {% if moretext %}
+  <a href="/" class="read-more">{{ moretext }}</a>
+  {% endif %}
+  {% if category == 'facebook' %}
+  <!-- <div class="facebook-share">
+    <div class="fb-like" data-href="http://example.com" data-colorscheme="light"></div>
+    <div class="fb-send" data-href="http://example.com" data-colorscheme="light"></div>
+  </div> -->
+  {% endif %}
+</article>
+{% endmacro %}
+
+{% macro news(image, date, title, content, moretext) %}
+{% if !moretext %}
+{% set moretext = 'Read more' %}{% endif %}
+{{ block('news', image, date, title, content, moretext) }}
+{% endmacro %}
+
+{% macro event(date, title, content) %}
+{{ block('events', null, date, title, content, 'Learn more') }}
+{% endmacro %}
+
+{% macro facebook(image, date, content) %}
+{{ block('facebook', image, date, null, content, 'Learn more') }}
+{% endmacro %}
+
+{% macro instagram(image, date, content) %}
+{{ block('instagram', image, date, null, content, null) }}
+{% endmacro %}
+
+{% macro video(image, date, title, content) %}
+{{ block('video', image, date, title, content, 'Read more') }}
+{% endmacro %}

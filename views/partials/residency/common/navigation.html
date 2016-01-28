@@ -1,0 +1,25 @@
+{% import '../../../macros/mock.html' as mock %}
+
+
+{{ mock.navigation([
+  'Internal Medicine Residency Program',
+  'About the Program',
+  'Resident & Conference Schedule',
+  'Current Residents'
+], 'Current Residents') }}
+
+
+{{ mock.navigation([
+  'Categorical',
+  'Preliminary Interns',
+  'PGY2',
+  'PGY3'
+], selected, 'tertiary') }}
+
+{{ mock.navigation([
+  "Director & Faculty",
+  "Recent Graduates",
+  'FAQ',
+  'Links & Resources',
+  'Contact Us'
+], '') }}

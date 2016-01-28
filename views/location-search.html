@@ -1,0 +1,24 @@
+{% extends 'layouts/interior.html' %}
+{% set current_section = 'locations' %}
+{% set script_component = 'locations' %}
+{% set body_class = 'body-search' %}
+
+{% block breadcrumbs %}
+{% include 'partials/locations/location-search/breadcrumbs.html' with { selected: 'Search Results' } %}
+{% endblock %}
+
+{% block navigation %}
+{% include 'partials/locations/location-search/navigation.html' with { selected: 'Search Our Locations' } %}
+{% endblock %}
+
+{% block header %}
+<header class="page-title">
+  <h1>Location Search Results <span>(4)</span></h1>
+</header>
+
+{% endblock %}
+
+{% block primary_content %}
+<!-- START LOCATION SEARCH RESULTS -->
+{% include 'partials/locations/location-search/results.html' %}
+<!-- END LOCATION SEARCH RESULTS -->
